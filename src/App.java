@@ -40,14 +40,27 @@ public class App {
     }
 
     public static int firstTwoSum(int[] nums) {
-
-        return -1; //this is a placeholder
+        int sum=0;
+if(nums.length>=2){
+sum=nums[0]+nums[1];
+return sum;
+}else if(nums.length==1){
+return nums[0];
+}else{
+    return 0;
+}
+       
 
     }
 
     public static int minWordLength(String sentence){
-
-
-        return -1; //this is a placeholder
+String[] cut=sentence.split(" ");
+int shortest=100000;
+for(int i=0;i<cut.length;i++){
+if(cut[i].length()<shortest){
+shortest=cut[i].length();
+}
+}
+        return shortest;
     }
 }
